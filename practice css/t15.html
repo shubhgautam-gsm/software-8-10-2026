@@ -12,9 +12,18 @@ div.background {
 
 div.transbox {
   margin: 90px;
-  background:radial-gradient(rgba(255, 251, 136, 0.813),rgba(230, 255, 41, 0.242),rgba(245, 245, 5, 0.418));
+  background:linear-gradient(rgba(48, 48, 46, 0.587),rgba(48, 48, 46, 0.325),rgba(255, 255, 253, 0.242),rgba(252, 252, 249, 0.418));
   border: 1px solid black;
   box-shadow: 0px 0px 10px 9px rgba(0,0,0,0.75);
+  transition: box-shadow 0.6s, transform 0.6s;
+}
+div.transbox:hover {
+  background:linear-gradient(rgba(228, 221, 30, 0.27),rgba(31, 68, 13, 0.546),rgba(42, 57, 51, 0.641));
+  border: 1px solid rgb(255, 82, 82);
+  box-shadow: 0px 0px 9px 6px rgb(255, 172, 70),0px 0px 15px 22px rgba(66, 19, 64, 0.75);
+  transform: scale(1.05) ;
+  border-radius: 50px 0;
+  
 }
 
 div.transbox p {
