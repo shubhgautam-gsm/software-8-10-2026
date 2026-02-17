@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Welcome Animation</title>
+
+<style>
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    perspective: 1000px;
+    font-family: Arial, sans-serif;
+
+    /* animated background image */
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("../img/phone.webp") center / cover no-repeat;
+
+    animation: bgZoom 18s ease-in-out infinite alternate;
+}
+
+/* ===== BACKGROUND ZOOM ANIMATION ===== */
+
+@keyframes bgZoom {
+    from { background-size: cover; }
+    to   { background-size: 115%; }
+}
+
+/* ===== CIRCUIT OVERLAY MOVE ===== */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../img/circuit.png");
+    background-size: 400px;
+    background-repeat: repeat;
+    opacity: 0.18;
+    z-index: 0;
+    animation: circuitMove 25s linear infinite;
+}
+
+@keyframes circuitMove {
+    from { background-position: 0 0; }
+    to   { background-position: 400px 400px; }
+}
+
+/* ===== GLOW PULSE ===== */
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center,
+        rgba(255,0,200,0.25),
+        transparent 60%);
+    z-index: 0;
+    animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0% { opacity: .4; }
+    50% { opacity: .8; }
+    100% { opacity: .4; }
+}
+
+/* ===== FLOATING BALLS ===== */
+
+.particles {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.ball {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff00cc;
+    box-shadow: 0 0 12px #ff00cc, 0 0 24px #ff00cc;
+    animation: floatBall linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatBall {
+    from { transform: translateY(100vh) scale(0.6); }
+    to   { transform: translateY(-10vh) scale(1.2); }
+}
+
+.ball:nth-child(odd) { animation-duration: 6s; }
+.ball:nth-child(even){ animation-duration: 10s; }
+
+/* ===== WELCOME TEXT ===== */
+
+.welcome3d {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 3px;
+    text-shadow:
+        0 0 10px #ff00cc,
+        0 0 25px #ff00cc,
+        0 0 50px #ff00cc;
+    animation: textPulse 2.5s ease-in-out infinite;
+    z-index: 3;
+}
+
+@keyframes textPulse {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.12); }
+    100% { transform: translateX(-50%) scale(1); }
+}
+
+/* ===== CENTER CONTENT ===== */
+
+.content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 3;
+      text-shadow:
+        0 0 10px #ff00cc,
+        0 0 25px #ff00cc,
+        0 0 50px #ff00cc;
+    animation: textPulse 2.5s ease-in-out infinite;
+}
+
+button {
+    padding: 14px 26px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #ce129f;
+    font-weight: bold;
+    transition: 0.3s;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #e704a3;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Floating Balls -->
+<div class="particles">
+    <div class="ball" style="left:10%"></div>
+    <div class="ball" style="left:20%"></div>
+    <div class="ball" style="left:30%"></div>
+    <div class="ball" style="left:40%"></div>
+    <div class="ball" style="left:50%"></div>
+    <div class="ball" style="left:60%"></div>
+    <div class="ball" style="left:70%"></div>
+    <div class="ball" style="left:80%"></div>
+    <div class="ball" style="left:90%"></div>
+</div>
+
+<div class="welcome3d">WELCOME</div>
+
+<div class="content">
+    <h2>3D Circuit Background</h2>
+    <button>Start</button>
+</div>
+
+</body>
+</html>

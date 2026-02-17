@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+        div.girl{
+            position: relative;
+            top:-100px;
+            left:100px;
+            }
+
+        /* Small image */
+        div.girl img {
+            background-color: lightgray;
+            height: 100px;
+            border-radius: 10px;
+            transition: width 2s, height 2s;
+        }
+
+        /* Hover effect */
+        .girl:hover img {
+            
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Big image on right */
+        div.div1 img {
+            position: absolute;
+            right: 10%;
+            top: 150px;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        /* First text block (moves down on hover) */
+        div.p {
+            width: 250px;
+            padding: 8px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-top: 20px;
+        }
+
+        /* Second text block (STAYS FIXED) */
+        div.h1 {
+            position: absolute;
+            right: 50px;
+            top: 450px; /* adjust position */
+            width: 250px;
+            padding: 8px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .back{
+            transform: translate(-450px) rotateZ(90deg);
+            background-image: linear-gradient(45deg, skyblue, lightgreen, rgb(201, 201, 44));
+            height: 300px;
+        
+        }
+        @keyframes rotate {
+            0%{
+                transform: translate(-350px) rotateZ(120deg);
+
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+
+    </div>
+    <div class="girl">
+        <img src="../img/bn.jpg" alt="girl" width="100">
+    </div>
+
+    <div class="div1">
+        <img src="../img/kj.jpg" alt="girl 1" width="350">
+    </div>
+
+    <div class="p">
+        <h1>Experience what you have learned</h1>
+        <p>
+            We treat each child as a unique individual and aim to instil in them a sense of curiosity
+            and a love of learning that will continue throughout their lives.
+        </p>
+    </div>
+
+    <div class="h1">
+        <h1>School librarians hear the question all the time</h1>
+        <p>
+            Egestas dui id ornare arcu odio. In tellus integer feugiat scelerisque varius morbi enim nunc.
+            Habitasse platea dictumst quisque sagittis.
+        </p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Education</title>
+
+    <style>
+        /* Remove scrollbars */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+        }
+
+        /* Full-page animated gradient background */
+        body {
+            background: linear-gradient(45deg, skyblue, lightgreen, #c9c92c, #ff9a9e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            animation: float 10s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                box-shadow: 2px 2px 6px 6px greenyellow;
+                transform: translateY(0) translateX(0) scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                box-shadow: 2px 2px 16px 9px rgb(47, 231, 255);
+
+                transform: translateY(-300px) translateX(50px) scale(0.5);
+                opacity: 0.7;
+            }
+
+            100% {
+                box-shadow: 2px 2px 26px 16px rgb(255, 227, 71);
+
+                transform: translateY(0) translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Container for text and images */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+        }
+
+        /* Text content */
+        .text {
+            max-width: 600px;
+            z-index: 2;
+            position: relative;
+            padding: 20px 30px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .text button {
+            font-weight: bold;
+            letter-spacing: 1px;
+            background-color: #c9c92c;
+            color: skyblue;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .text button:hover {
+            transform: translateY(-6px) rotateX(12deg);
+            box-shadow: 0 18px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Book image */
+        .book img {
+            width: 85vw;
+            height: auto;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .book img {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .text {
+                max-width: 100%;
+            }
+        }
+  
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+            <div class="text">
+                <h1>Library Education</h1>
+                <p>We treat each child as a unique individual and aim to instil in them a sense of curiosity
+                    and a love of learning.</p>
+                <button>LEARN MORE</button>
+            </div>
+        </div>
+        
+
+        <div class="book">
+            <img src="../img/5807340-min.png" alt="Book Image">
+        </div>
+    </div>
+
+    <!-- Floating particles -->
+    <div class="particle" style="top:20%; left:30%; animation-duration:6s;"></div>
+    <div class="particle" style="top:50%; left:60%; animation-duration:8s;"></div>
+    <div class="particle" style="top:80%; left:20%; animation-duration:7s;"></div>
+    <div class="particle" style="top:35%; left:75%; animation-duration:9s;"></div>
+    <div class="particle" style="top:60%; left:40%; animation-duration:5s;"></div>
+
+</body>
+
+</html> 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            position: relative;
+            width: 1400px;
+        }
+
+        .container div {
+            height: 390px;
+            border: 2px solid red;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+
+        }
+
+        .card1 {
+            z-index: 3;
+            background-color: #daff35;
+            position: absolute;
+            right: 10px;
+
+        }
+
+        .card2 {
+
+            background-color: #ff9a16;
+            z-index: 6;
+            position: absolute;
+            right: 40px;
+
+        }
+
+        .card3 {
+            background-color: #29b8e0;
+            position: absolute;
+            right: 70px;
+            z-index: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="card1">
+            <h1>Card 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+        </div>
+        <div class="card2">
+            <h1>Card 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+        </div>
+        <div class="card3">
+            <h1>Card 3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
+        </div>
+
+    </div>
+
+
+    <div>cyx</div>
+</body>
+
+</html>

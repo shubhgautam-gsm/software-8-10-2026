@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.relative {
+  /* remove relative and see the changes */
+  position: relative;
+  height: 400px;
+  width: 450px;
+  border: 3px solid #73AD21;
+}
+.relative span {
+ height: 50px;
+ border: 2px solid red; 
+}
+
+.box1{
+  right: 0;
+  position: absolute;
+}
+.box2{
+  position: absolute;
+  bottom: 0;
+}
+</style>
+</head>
+<body>
+
+<h2>Using position: relative;</h2>
+
+<p class="relative">An element with position: relative; is positioned relative to its normal position:</p>
+
+<div class="relative">
+  <span class="box1">box1</span>
+  <span class="box2">box2</span>
+
+</div>
+
+</body>
+</html>
+
+

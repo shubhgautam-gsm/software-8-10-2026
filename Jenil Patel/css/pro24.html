@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+
+            /* phone background */
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url("../img/phone.webp") center / cover no-repeat;
+        }
+
+        /* ===== CIRCUIT OVERLAY MOVE ===== */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: url("../img/circuit.png") repeat;
+            background-size: 400px;
+            opacity: 0.18;
+            animation: circuitMove 25s linear infinite;
+        }
+
+        @keyframes circuitMove {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 400px 400px;
+            }
+        }
+
+        /* ===== FLOATING BALLS ===== */
+
+        .particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .ball {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ff00cc;
+            box-shadow: 0 0 12px #ff00cc;
+            animation: floatBall linear infinite;
+        }
+
+        @keyframes floatBall {
+            from {
+                transform: translateY(100vh);
+            }
+
+            to {
+                transform: translateY(-10vh);
+            }
+        }
+
+        .ball:nth-child(odd) {
+            animation-duration: 6s;
+        }
+
+        .ball:nth-child(even) {
+            animation-duration: 10s;
+        }
+
+        /* ===== TEXT ===== */
+
+        .welcome {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 42px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 20px #ff00cc;
+            animation: pulse 2.5s infinite;
+        }
+
+        @keyframes pulse {
+            50% {
+                transform: translateX(-50%) scale(1.1);
+            }
+        }
+
+        /* ===== CONTENT ===== */
+
+        .content {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        button {
+            padding: 14px 26px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #ce129f;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="particles">
+        <div class="ball" style="left:10%"></div>
+        <div class="ball" style="left:30%"></div>
+        <div class="ball" style="left:50%"></div>
+        <div class="ball" style="left:70%"></div>
+        <div class="ball" style="left:90%"></div>
+    </div>
+
+    <div class="welcome">WELCOME</div>
+
+    <div class="content">
+        <h2>3D Circuit Background</h2>
+        <button>Start</button>
+    </div>
+
+</body>
+
+</html>

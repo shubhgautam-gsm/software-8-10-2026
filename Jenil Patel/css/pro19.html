@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            background-image: url("../img/Small-office-design-3D-visuals-20.webp");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: moveBackground 10s infinite linear;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Text animation container */
+        .content h1 {
+            font-size: 3rem;
+            opacity: 0;
+            animation: fadeUp 1.5s ease forwards, glowText 2s infinite alternate;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            opacity: 0;
+            animation: fadeUp 1.5s ease forwards;
+            animation-delay: 0.8s;
+        }
+
+        /* Fade and slide up animation */
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Background animation */
+        @keyframes moveBackground {
+            0% {
+                background-position: center;
+            }
+            50% {
+                background-position: right bottom;
+            }
+            100% {
+                background-position: center;
+            }
+        }
+
+        /* Text glow effect */
+        @keyframes glowText {
+            0% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+            }
+            50% {
+                text-shadow: 0 0 20px #f0f, 0 0 30px #f0f, 0 0 40px #f0f;
+            }
+            100% {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+            }
+        }
+
+        /* Bouncing effect (optional for extra animation) */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Applying bounce to paragraph */
+        .content p {
+            animation: fadeUp 1.5s ease forwards, bounce 1s infinite;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Welcome to the Office Design</h1>
+        <p>Explore creative spaces and innovative designs.</p>
+    </div>
+    <div>
+        <img src="../img/Screenshot (1).png" alt="">
+    </div>
+</body>
+</html>

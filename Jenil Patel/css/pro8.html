@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+
+        body {
+            margin: 0;
+            position: relative;
+        }
+
+        /* Background animation (runs once and stops) */
+        .back {
+            height: 300px;
+            background-image: linear-gradient(45deg, skyblue, lightgreen, rgb(201, 201, 44));
+            animation: rotate 6s ease-in-out forwards;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: -1;
+            /* Ensure background is behind everything else */
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translateX(-1000px) rotate(90deg);
+            }
+
+            to {
+                transform: translateX(0px) rotate(180deg);
+            }
+        }
+
+        /* Image container */
+        .images {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            padding: 50px 10%;
+            z-index: 1;
+            /* Ensure images are above the background */
+        }
+
+        .girl img,
+        .girl2 img {
+            width: 350px;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        /* Text blocks */
+        .p {
+            width: 250px;
+            padding: 8px;
+            margin-left: 10%;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+            z-index: 1;
+            position: relative;
+        }
+
+         div.h1 {
+            width: 250px;       
+            height:auto;
+            padding: 8px;
+            margin-right:20%;
+            margin-top: -15%;
+            float:right;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+            top: 10px;
+            z-index: 1;
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back"></div>
+
+    <div class="images">
+        <div class="girl">
+            <img src="../img/bn.jpg" alt="girl">
+        </div>
+
+        <div class="girl2">
+            <img src="../img/kj.jpg" alt="girl 1">
+        </div>
+    </div>
+
+    <div class="p">
+        <h1>Experience what you have learned</h1>
+        <p>
+            We treat each child as a unique individual and aim to instil in them a sense of curiosity
+            and a love of learning.
+        </p>
+    </div>
+
+    <div class="h1">
+        <h1>School librarians hear the question all the time</h1>
+        <p>
+            Egestas dui id ornare arcu odio. In tellus integer feugiat scelerisque varius morbi enim nunc.
+        </p>
+    </div>
+
+</body>
+
+</html>

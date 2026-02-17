@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Education</title>
+
+    <style>
+        /* Remove scrollbars */
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            /* Hide both horizontal and vertical scrollbars */
+        }
+
+        body {
+            background-image: linear-gradient(45deg,
+                    skyblue,
+                    lightgreen,
+                    rgb(201, 201, 44));
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            perspective: 1000px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            min-height: 100vh;
+        }
+
+        /* Layout */
+        .container {
+            display: flex;
+            align-items: center;
+            /* Vertically center content */
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+            /* Full screen height */
+        }
+
+        /* Text container */
+        .text {
+            max-width: 600px;
+            z-index: 2;
+            position: relative;
+            padding: 20px 30px;
+            /* Add padding around text */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Semi-transparent dark background */
+            border-radius: 15px;
+            /* Rounded corners */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            /* Subtle shadow */
+            line-height: 1.6;
+            /* Better line spacing for readability */
+            color: white;
+        }
+
+        /* Headline */
+        .text h1 {
+            font-size: 48px;
+            /* Slightly bigger */
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            /* Space between letters */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            /* Subtle text shadow */
+        }
+
+        /* Paragraph */
+        .text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Button */
+        .text button {
+            font-weight: bold;
+            letter-spacing: 1px;
+            background-color: rgb(201, 201, 44);
+            color: skyblue;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .text button:hover {
+            transform: translateY(-6px) rotateX(12deg);
+            box-shadow: 0 18px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Book Image - 85% of Screen Width */
+        .book img {
+            width: 85vw;
+            /* 85% of the viewport width */
+            height: auto;
+            /* Maintain aspect ratio */
+            object-fit: cover;
+            position: relative;
+            float: right;
+            /* Makes the image float to the right */
+            margin-left: 20px;
+            /* Space between text and image */
+            z-index: -1;
+        }
+
+        /* Mobile */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .book img {
+                width: 100%;
+                /* Full width on smaller screens */
+                float: none;
+                /* Remove float on mobile */
+                height: auto;
+                /* Maintain aspect ratio */
+                margin-left: 0;
+                /* Remove left margin */
+            }
+
+            .text {
+                max-width: 100%;
+                margin-bottom: 30px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="text">
+            <h1>Library Education</h1>
+
+            <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident.
+            </p>
+
+            <button>LEARN MORE</button>
+        </div>
+
+        <div class="book">
+            <img src="../img/5807340-min.png" alt="Book Image">
+        </div>
+
+    </div>
+
+</body>
+
+</html>

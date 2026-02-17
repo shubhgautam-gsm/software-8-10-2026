@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Ensure padding and border don't cause overflow */
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            min-height: 100vh;
+            overflow-x: hidden;
+            /* Prevent horizontal scrollbar */
+        }
+
+        body {
+            margin: 0;
+            position: relative;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+            background-color: #f5f5f5;
+            overflow-y: auto;
+            /* Allow scrolling if content overflows */
+        }
+
+        /* Background animation */
+        .back {
+            height: 300px;
+            background-image: linear-gradient(45deg, skyblue, lightgreen, rgb(201, 201, 44));
+            animation: rotate 6s ease-in-out forwards;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: translateX(-1000px) rotate(90deg);
+            }
+
+            to {
+                transform: translateX(0px) rotate(180deg);
+            }
+        }
+
+        /* Image container with 3D perspective */
+        .images {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 10%;
+            z-index: 1;
+            perspective: 1200px; /* Adds depth for 3D effect */
+        }
+
+        /* Image card with transition */
+        .girl,
+        .girl2 {
+            position: relative;
+            padding: 16px;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow:
+                0 15px 30px rgba(0, 0, 0, 0.25),
+                0 5px 10px rgba(0, 0, 0, 0.15);
+            transform-style: preserve-3d;
+        }
+
+        /* Animated background behind image */
+        .girl::before,
+        .girl2::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(270deg,
+                    #6dd5ed,
+                    #367a8b,
+                    #a1ffce,
+                    #faffd1);
+            background-size: 600% 600%;
+            animation: gradientMove 8s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* 3D hover effect */
+        .girl:hover,
+        .girl2:hover {
+            transform: rotateY(15deg) rotateX(10deg) scale(1.05);
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.35),
+                0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .girl img,
+        .girl2 img {
+            width: 350px;
+            height: 400px;
+            border-radius: 12px;
+            display: block;
+            object-fit: cover;
+            background-color: white;
+            padding: 6px;
+            transition: transform 0.4s ease;
+        }
+
+        /* Text blocks */
+        .p {
+            width: 250px;
+            padding: 8px;
+            margin-left: 10%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .h1 {
+            width: 250px;
+            padding: 8px;
+            margin-right: 20%;
+            margin-top: -18%;
+            float: right;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="back"></div>
+
+    <div class="images">
+        <div class="girl">
+            <img src="../img/bn.jpg" alt="girl">
+        </div>
+
+        <div class="girl2">
+            <img src="../img/kj.jpg" alt="girl 1">
+        </div>
+    </div>
+
+    <div class="p">
+        <h1>Experience what you have learned</h1>
+        <p>
+            We treat each child as a unique individual and aim to instil in them a sense of curiosity
+            and a love of learning.
+        </p>
+    </div>
+
+    <div class="h1">
+        <h1>School librarians hear the question all the time</h1>
+        <p>
+            Egestas dui id ornare arcu odio. In tellus integer feugiat scelerisque varius morbi enim nunc.
+        </p>
+    </div>
+
+</body>
+
+</html>
+    

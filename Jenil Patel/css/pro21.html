@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Circuit Animation</title>
+
+<style>
+body {
+    margin: 0;
+    background: #0b0f1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    perspective: 800px;
+    overflow: hidden;
+}
+
+.scene {
+    width: 260px;
+    height: 260px;
+}
+
+.circuit-box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate3d 8s linear infinite;
+}
+
+.face {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    background: #111;
+    border: 2px solid #1affaa;
+    box-shadow: 0 0 20px #00ffaa inset, 0 0 20px #00ffaa;
+}
+
+.face img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.front  { transform: translateZ(130px); }
+.back   { transform: rotateY(180deg) translateZ(130px); }
+.right  { transform: rotateY(90deg) translateZ(130px); }
+.left   { transform: rotateY(-90deg) translateZ(130px); }
+.top    { transform: rotateX(90deg) translateZ(130px); }
+.bottom { transform: rotateX(-90deg) translateZ(130px); }
+
+@keyframes rotate3d {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.glow-line {
+    position: absolute;
+    width: 200%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #00ffaa, transparent);
+    animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(50%); }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="scene">
+  <div class="circuit-box">
+
+    <!-- Use your circuit image on all faces -->
+    <div class="face front"><img src="../img/circut.png"></div>
+    <div class="face back"><img src="../img/circut.png"></div>
+    <div class="face right"><img src="../img/circut.png"></div>
+    <div class="face left"><img src="../img/circut.png"></div>
+    <div class="face top"><img src="../img/kj.jpg"></div>
+    <div class="face bottom"><img src="../img/cedreo-en_3d-render_office-07.webp"></div>
+
+  </div>
+</div>
+
+<div class="glow-line"></div>
+
+</body>
+</html>

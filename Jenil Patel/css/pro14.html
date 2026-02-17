@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Education</title>
+
+    <style>
+        /* Remove scrollbars */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+        }
+
+        /* Full-page animated gradient background */
+        body {
+            background: linear-gradient(45deg, skyblue, lightgreen, #c9c92c, #ff9a9e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            position: relative;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            animation: float 10s linear infinite;
+        }
+        
+
+        @keyframes float {
+            0% {
+                box-shadow: 2px 2px 6px 6px greenyellow;
+                transform: translateY(0) translateX(0) scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                box-shadow: 2px 2px 16px 9px rgb(47, 231, 255);
+
+                transform: translateY(-300px) translateX(50px) scale(0.5);
+                opacity: 0.7;
+            }
+
+            100% {
+                box-shadow: 2px 2px 26px 16px rgb(255, 227, 71);
+
+                transform: translateY(0) translateX(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Container for text and images */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            height: 100vh;
+        }
+
+        /* Text content */
+        .text {
+            max-width: 600px;
+            z-index: 2;
+            position: relative;
+            padding: 20px 30px;
+            background-color: rgba(0, 0,0);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            color: white;
+            line-height: 1.6;
+        }
+
+        .text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .text button {
+            font-weight: bold;
+            letter-spacing: 1px;
+            background-color: #c9c92c;
+            color: skyblue;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .text button:hover {
+            transform: translateY(-6px) rotateX(12deg);
+            box-shadow: 0 18px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Book image */
+        .book img {
+            width: 85vw;
+            height: auto;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .book img {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .text {
+                max-width: 100%;
+            }
+        }
+    .main{
+        padding: 10px 10px;
+ 
+        animation: shiftGradient 2s  infinite;
+
+       background: conic-gradient(red,orange,yellow,purple); 
+    }
+
+/* Keyframes for shifting the gradient in steps */
+@keyframes shiftGradient {
+    0% {
+        background: conic-gradient(red 0%, orange 25%, green 50%, purple 75%);
+    }
+    5% {
+        background: conic-gradient(red 5%, orange 30%, green 55%, purple 80%);
+    }
+    10% {
+        background: conic-gradient(red 10%, orange 35%, green 60%, purple 85%);
+    }
+    15% {
+        background: conic-gradient(red 15%, orange 40%, green 65%, purple 90%);
+    }
+    20% {
+        background: conic-gradient(red 20%, orange 45%, green 70%, purple 95%);
+    }
+    25% {
+        background: conic-gradient(red 25%, orange 50%, green 75%, purple 100%);
+    }
+    30% {
+        background: conic-gradient(red 30%, orange 55%, green 80%, purple 100%);
+    }
+    35% {
+        background: conic-gradient(red 35%, orange 60%, green 85%, purple 100%);
+    }
+    40% {
+        background: conic-gradient(red 40%, orange 65%, green 90%, purple 100%);
+    }
+    45% {
+        background: conic-gradient(red 45%, orange 70%, green 95%, purple 100%);
+    }
+    50% {
+        background: conic-gradient(red 50%, orange 75%, green 100%, purple 100%);
+    }
+    55% {
+        background: conic-gradient(red 55%, orange 80%, green 100%, purple 100%);
+    }
+    60% {
+        background: conic-gradient(red 60%, orange 85%, green 100%, purple 100%);
+    }
+    65% {
+        background: conic-gradient(red 65%, orange 90%, green 100%, purple 100%);
+    }
+    70% {
+        background: conic-gradient(red 70%, orange 95%, green 100%, purple 100%);
+    }
+    75% {
+        background: conic-gradient(red 75%, orange 100%, green 100%, purple 100%);
+    }
+    80% {
+        background: conic-gradient(red 80%, orange 100%, green 100%, purple 100%);
+    }
+    85% {
+        background: conic-gradient(red 85%, orange 100%, green 100%, purple 100%);
+    }
+    90% {
+        background: conic-gradient(red 90%, orange 100%, green 100%, purple 100%);
+    }
+    95% {
+        background: conic-gradient(red 95%, orange 100%, green 100%, purple 100%);
+    }
+    100% {
+        background: conic-gradient(red 100%, orange 100%, green 100%, purple 100%);
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+            <div class="text">
+                <h1>Library Education</h1>
+                <p>We treat each child as a unique individual and aim to instil in them a sense of curiosity
+                    and a love of learning.</p>
+                <button>LEARN MORE</button>
+            </div>
+        </div>
+        
+
+        <div class="book">
+            <img src="../img/5807340-min.png" alt="Book Image">
+        </div>
+    </div>
+
+    <!-- Floating particles -->
+    <div class="particle" style="top:20%; left:30%; animation-duration:6s;"></div>
+    <div class="particle" style="top:50%; left:60%; animation-duration:8s;"></div>
+    <div class="particle" style="top:80%; left:20%; animation-duration:7s;"></div>
+    <div class="particle" style="top:35%; left:75%; animation-duration:9s;"></div>
+    <div class="particle" style="top:60%; left:40%; animation-duration:5s;"></div>
+
+</body>
+
+</html> 
