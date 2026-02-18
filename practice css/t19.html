@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#overflowTest {
+  background: #04AA6D;
+  padding: 15px;
+  width: 900px;
+  height: 420px;
+  overflow-x:scroll;
+  text-wrap: nowrap;
+  border: 1px solid #ccc;
+  /* background: url(../imgs/car1.jpg) left,url(../imgs/car2.jpg) center,url(../imgs/purse1.jpg) right; */
+}
+#overflowTest img {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+</style>
+</head>
+<body>
+
+<h2>CSS overflow Property</h2>
+
+<p>The overflow property controls what happens to content that is too big to fit into an area.</p>
+
+<p>Here, scrollbars are added on overflow:</p>
+
+<div id="overflowTest">
+    <img src="../imgs/car1.jpg" alt="">
+    <img src="../imgs/car2.jpg" alt="">
+    <img src="../imgs/purse1.jpg" alt="">
+
+</div>
+
+</body>
+</html>
+
+
