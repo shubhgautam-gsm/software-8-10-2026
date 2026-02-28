@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Ball Example</title>
+    <style>
+        .chakra {
+            height: 200px;
+            width: 200px;
+            background: url(../imgs/sudarshan.jpg);
+            position: relative;
+            animation-name: moveChakra;
+            animation-duration: 6s;
+        }
+
+        @keyframes moveChakra {
+            0% {
+                top: 0;
+                left: 0;
+                transform: rotateX(70deg) rotateZ(25deg) scale(1);
+            }
+
+            50% {
+                top: 0;
+                left: 900px;
+                transform: rotateX(70deg) rotateZ(25deg) scale(1.5);
+                transform: rotateX(90deg) rotateZ(360deg) ;
+            }
+            75% {
+                top: 50px;
+                left: 0;
+                transform: rotateX(70deg) rotateZ(25deg) scale(4);
+            }
+            
+                100% {
+                    top: 50px;
+                    left: 0;
+                    transform: rotateX(70deg) rotateZ(25deg);
+                }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chakra"></div>
+</body>
+
+</html>
