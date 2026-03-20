@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percentage Media Query</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#222;
+}
+
+/* Container */
+.container{
+  width:100%;
+}
+
+/* Boxes */
+.box{
+  float:left;
+  width:25%; /* Desktop default */
+  padding:20px;
+}
+
+.inner{
+  background:teal;
+  color:white;
+  text-align:center;
+  padding:40px;
+  border-radius:10px;
+}
+
+/* 📱 Mobile (0–480px) */
+@media(max-width:480px){
+  .box{
+    width:100%;
+  }
+  .inner{
+    background:red;
+  }
+}
+
+/* 📲 Tablet (481–768px) */
+@media(min-width:481px) and (max-width:768px){
+  .box{
+    width:50%;
+  }
+  .inner{
+    background:orange;
+  }
+}
+
+/* 💻 Laptop (769–1024px) */
+@media(min-width:769px) and (max-width:1024px){
+  .box{
+    width:33.33%;
+  }
+  .inner{
+    background:green;
+  }
+}
+
+/* 🖥 Desktop (1025px+) */
+@media(min-width:1025px){
+  .box{
+    width:25%;
+  }
+  .inner{
+    background:teal;
+  }
+}
+
+/* Clear float */
+.container::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="box"><div class="inner">Box 1</div></div>
+  <div class="box"><div class="inner">Box 2</div></div>
+  <div class="box"><div class="inner">Box 3</div></div>
+  <div class="box"><div class="inner">Box 4</div></div>
+  <div class="box"><div class="inner">Box 5</div></div>
+  <div class="box"><div class="inner">Box 6</div></div>
+  <div class="box"><div class="inner">Box 7</div></div>
+  <div class="box"><div class="inner">Box 8</div></div>
+</div>
+
+</body>
+</html>

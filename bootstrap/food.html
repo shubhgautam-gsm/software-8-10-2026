@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Cards</title>
+
+<style>
+  
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#5a5959;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap:20px;
+}
+
+.card{
+  border-radius:15px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+/* DIFFERENT SHADOWS FOR EACH CARD */
+.card:nth-child(1){
+  background:#ffe5ec;
+  box-shadow:0 5px 20px rgba(255, 0, 100, 0.4);
+}
+
+.card:nth-child(2){
+  background:#e0f7fa;
+  box-shadow:0 5px 20px rgba(0, 150, 255, 0.4);
+}
+
+.card:nth-child(3){
+  background:#fff3cd;
+  box-shadow:0 5px 20px rgba(255, 170, 0, 0.4);
+}
+
+/* DIFFERENT COLORS FOR EACH CARD */
+.card:nth-child(1){
+  background:#ffe5ec;
+}
+
+.card:nth-child(2){
+  background:#e0f7fa;
+}
+
+.card:nth-child(3){
+  background:#fff3cd;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:15px;
+}
+
+.card-content h2{
+  margin-bottom:10px;
+}
+
+.card-content p{
+  color:#333;
+  font-size:14px;
+  margin-bottom:15px;
+}
+
+.price{
+  font-weight:bold;
+  color:#e63946;
+  margin-bottom:10px;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  border:none;
+  background:#e63946;
+  color:white;
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  background:#d62828;
+}
+
+@media(max-width:600px){
+  .card img{
+    height:180px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Delicious Food Menu</h1>
+
+  <div class="cards">
+
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Pizza">
+      <div class="card-content">
+        <h2>Cheese Pizza</h2>
+        <p>Freshly baked pizza with mozzarella cheese and toppings.</p>
+        <div class="price">₹199</div>
+        <button>Order Now</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Burger">
+      <div class="card-content">
+        <h2>Veg Burger</h2>
+        <p>Crispy veggie patty with fresh lettuce and sauces.</p>
+        <div class="price">₹99</div>
+        <button>Order Now</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Pasta">
+      <div class="card-content">
+        <h2>Italian Pasta</h2>
+        <p>Creamy pasta cooked with herbs and rich sauce.</p>
+        <div class="price">₹149</div>
+        <button>Order Now</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
